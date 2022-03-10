@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".manageExpAct">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarTop2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_border"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/thrifty_logo" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/addExpBtn2"
+        android:layout_width="211dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#13C6C5"
+        android:text="ADD EXPENSE"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarTop2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/expRV"
+        android:layout_width="match_parent"
+        android:layout_height="411dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addExpBtn2" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarBottom2"
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:background="@color/teal_700"
+        android:padding="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="25dp"
+            android:textColor="#FFF"
+            android:text="TOTAL PER WEEK\t\t\t\t "/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#EDE6A5"
+            android:textStyle="bold"
+            android:text="₱"/>
+
+        <EditText
+            android:id="@+id/totalWeeklyExp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textColor="#FFF"
+            android:editable="false"
+            android:text="00.00"
+            tools:ignore="Deprecated" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
